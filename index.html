@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JW Climatização MCZ: limpeza e instalação de ar-condicionado split em Maceió e Alagoas</title>
+<meta name="description" content="Manutenção preventiva, limpeza e instalação de ar-condicionado split em Maceió, no litoral de Alagoas e em Arapiraca. Orçamento grátis pelo WhatsApp.">
+<meta name="theme-color" content="#eef4fb">
+<meta name="robots" content="noindex, nofollow"><!-- rascunho: tirar esta linha quando a página for aprovada -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="JW Climatização MCZ: ar-condicionado split em Maceió e Alagoas">
+<meta property="og:description" content="Limpeza e instalação de split. Orçamento grátis pelo WhatsApp.">
+<meta property="og:image" content="img/condensadora-fachada.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght@600..900&family=Geologica:wght@300..700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "JW Climatização MCZ",
+  "legalName": "47.673.585 JOSE WILLIANS SANTOS DA SILVA",
+  "taxID": "47.673.585/0001-74",
+  "description": "Manutenção preventiva, limpeza e instalação de ar-condicionado split em residências, comércios e escritórios.",
+  "telephone": "+55 82 99955-9744",
+  "image": "img/condensadora-fachada.webp",
+  "priceRange": "Orçamento grátis",
+  "areaServed": [
+    {"@type": "City", "name": "Maceió"},
+    {"@type": "City", "name": "Arapiraca"},
+    {"@type": "AdministrativeArea", "name": "Região Metropolitana de Maceió"},
+    {"@type": "AdministrativeArea", "name": "Litoral Norte de Alagoas"},
+    {"@type": "AdministrativeArea", "name": "Litoral Sul de Alagoas"}
+  ],
+  "address": {"@type": "PostalAddress", "addressLocality": "Maceió", "addressRegion": "AL", "addressCountry": "BR"},
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Manutenção preventiva e limpeza de ar-condicionado split"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Instalação de ar-condicionado split"}}
+  ]
+}
+</script>
+<style>
+/* Plano (skill frontend-design):
+   assunto: técnico de ar-condicionado split em Alagoas. Elemento memorável: o visor do aparelho,
+   que cai de 30° para 18° quando a página abre, enquanto o fundo sai do calor para o frio.
+   Cores: gelo #eef4fb, calor #fbeee3, noite #0a1b33, azul JW #0b57c9, visor #7fd8ff.
+   Tipos: Geologica (texto e títulos), Doto (pontos de LED, só nos números do visor). */
+*{box-sizing:border-box}
+html,body{margin:0}
+:root{
+  --ice:#eef4fb; --heat:#fbeee3; --paper:#f7fafd; --ink:#0a1b33; --ink-2:#3d5170; --line:rgba(10,27,51,.13);
+  --blue:#0b57c9; --blue-d:#0846a3; --led:#7fd8ff; --panel:#0d2547;
+  --sans:"Geologica",system-ui,sans-serif; --led-font:"Doto",ui-monospace,monospace;
+  --gut:clamp(20px,5.5vw,80px); --max:1280px; --nav:76px; --bar:0px;
+  --ease-out:cubic-bezier(.22,1,.36,1); --spring:cubic-bezier(.34,1.56,.64,1);
+}
+@media (max-width:639px){:root{--nav:60px;--bar:calc(68px + env(safe-area-inset-bottom))}}
+html{scroll-padding-top:var(--nav)}
+body{background:var(--ice);color:var(--ink);font:300 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;padding-bottom:var(--bar)}
+body.is-warm{background:var(--heat)}
+body.is-cooling{transition:background-color 1.6s var(--ease-out)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:calc(var(--max) + 2*var(--gut));margin:0 auto;padding-inline:var(--gut)}
+h1,h2,h3{margin:0;font-weight:500;letter-spacing:-.035em;line-height:1}
+h2{font-size:clamp(34px,3.6vw,58px);max-width:16ch}
+h3{font-size:22px;letter-spacing:-.02em;line-height:1.2}
+p{margin:0}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:16px;top:12px;background:#fff;padding:8px 12px;z-index:40}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:14px;font:500 16px/1 var(--sans);text-decoration:none;border:0;cursor:pointer;transition:transform .2s var(--ease-out),background-color .2s ease;-webkit-tap-highlight-color:transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.97);transition-duration:.08s}
+.btn--main{background:var(--blue);color:#fff}
+.btn--main:hover{background:var(--blue-d)}
+.btn--soft{background:rgba(10,27,51,.07);color:var(--ink)}
+.btn--soft:hover{background:rgba(10,27,51,.12)}
+.btn svg{width:20px;height:20px;flex:none}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* cabeçalho */
+.nav{position:fixed;inset:0 0 auto;height:var(--nav);z-index:20;display:flex;align-items:center;transition:background-color .3s ease,box-shadow .3s ease}
+.nav.is-scrolled{background:rgba(238,244,251,.82);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:32px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:600;font-size:19px;letter-spacing:-.02em}
+.brand .chip{font-family:var(--sans);font-weight:700;font-size:16px;letter-spacing:-.01em;background:var(--panel);color:var(--led);border-radius:10px;height:38px;padding:0 10px;display:grid;place-items:center}
+.brand small{font-weight:400;color:var(--ink-2);font-size:14px}
+.menu{display:flex;gap:28px;list-style:none;margin:0 0 0 auto;padding:0}
+.menu a{text-decoration:none;font-size:15px;font-weight:400;position:relative;padding:6px 0}
+.menu a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .3s var(--ease-out)}
+.menu a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav .btn{height:44px;padding:0 18px;font-size:15px}
+@media (max-width:1023px){.menu{display:none}.nav .btn{margin-left:auto}}
+@media (max-width:639px){.nav .btn{display:none}}
+
+/* herói */
+.hero{min-height:100svh;padding:calc(var(--nav) + 40px) 0 56px;display:flex}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:center}
+.hero h1{font-size:clamp(44px,5.6vw,88px);font-weight:500;letter-spacing:-.045em;line-height:.96}
+.hero .lead{font-size:clamp(17px,1.3vw,20px);max-width:40ch;margin:28px 0 36px;color:var(--ink-2)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:40px;font-size:15px;color:var(--ink-2);list-style:none;padding:0}
+.hero .meta li{display:flex;align-items:center;gap:8px}
+.hero .meta svg{width:18px;height:18px;color:var(--blue)}
+.stage{position:relative;height:min(78svh,760px);min-height:520px}
+.stage .photo{position:absolute;inset:0 0 0 12%;border-radius:28px;overflow:hidden}
+.stage .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+/* o visor */
+.display{position:absolute;left:0;top:14%;width:min(330px,62%);background:var(--panel);color:var(--led);border-radius:22px;padding:22px 26px 20px;box-shadow:0 30px 60px -20px rgba(10,27,51,.45),inset 0 0 0 1px rgba(127,216,255,.12)}
+.display .row{display:flex;align-items:flex-start;justify-content:space-between}
+.display .temp{font-family:var(--led-font);font-weight:900;font-size:clamp(84px,8.4vw,124px);line-height:.85;letter-spacing:-.02em;display:flex;text-shadow:0 0 18px rgba(127,216,255,.55)}
+.display .deg{font-family:var(--led-font);font-size:.42em;margin-left:4px;margin-top:.12em}
+.digit-slot{position:relative;display:inline-block;overflow:hidden;height:1em;line-height:1;width:.62em;text-align:center}
+.digit-slot span{position:absolute;inset:0;transition:transform .6s var(--spring),opacity .35s ease,filter .35s ease}
+.digit-slot .old{transform:translateY(-.6em);opacity:0;filter:blur(4px)}
+.digit-slot .new.is-in{transform:translateY(.6em);opacity:0;filter:blur(4px)}
+.display .modes{display:grid;gap:10px;justify-items:end;padding-top:6px}
+.display .modes svg{width:26px;height:26px;opacity:.95}
+.display .fan{animation:spin 1.6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.display .air{display:flex;gap:8px;margin-top:18px}
+.display .air i{height:4px;flex:1;border-radius:4px;background:rgba(127,216,255,.18);overflow:hidden;position:relative}
+.display .air i::after{content:"";position:absolute;inset:0;background:var(--led);transform:translateX(-100%);animation:flow 2.4s var(--ease-out) infinite}
+.display .air i:nth-child(2)::after{animation-delay:.25s}.display .air i:nth-child(3)::after{animation-delay:.5s}
+@keyframes flow{60%,100%{transform:translateX(100%)}}
+.stage .tag{position:absolute;right:20px;bottom:20px;background:rgba(247,250,253,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:16px;padding:14px 18px;max-width:250px;font-size:15px;line-height:1.4}
+.stage .tag strong{display:block;font-weight:600}
+@media (max-width:1023px){
+  .hero{min-height:auto}
+  .hero .wrap{grid-template-columns:1fr}
+  .stage{height:520px;min-height:0}
+}
+@media (max-width:639px){
+  .hero{padding-top:calc(var(--nav) + 24px)}
+  .hero .btns .btn{width:100%}
+  .stage{height:440px}
+  .stage .photo{inset:0}
+  .display{left:16px;top:16px;padding:16px 18px;border-radius:18px;width:auto}
+  .display .temp{font-size:76px}
+  .display .row{gap:18px}
+  .stage .tag{left:16px;right:16px;max-width:none}
+}
+
+/* seções */
+.sec{padding:clamp(88px,10vw,150px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:clamp(36px,4vw,56px)}
+.sec-head p{max-width:42ch;color:var(--ink-2);font-size:18px}
+.paper{background:var(--paper)}
+
+/* serviços: abas */
+.tabs{display:inline-flex;position:relative;background:rgba(10,27,51,.06);border-radius:16px;padding:5px;margin-bottom:36px}
+.tabs button{position:relative;z-index:1;border:0;background:none;font:500 16px/1 var(--sans);color:var(--ink-2);padding:14px 22px;border-radius:12px;cursor:pointer;transition:color .25s ease}
+.tabs button[aria-selected="true"]{color:#fff}
+.tabs .pill{position:absolute;z-index:0;top:5px;bottom:5px;left:5px;border-radius:12px;background:var(--ink);transition:transform .45s var(--ease-out),width .45s var(--ease-out)}
+.panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(28px,4vw,64px);align-items:center}
+.panel[hidden]{display:none}
+.panel.is-entering .p-text>*,.panel.is-entering .p-pics{opacity:0;transform:translateY(12px);filter:blur(6px)}
+.panel .p-text>*,.panel .p-pics{transition:opacity .45s var(--ease-out),transform .45s var(--ease-out),filter .45s var(--ease-out)}
+.panel .p-text>*:nth-child(2){transition-delay:.04s}.panel .p-text>*:nth-child(3){transition-delay:.08s}
+.p-text h3{font-size:clamp(28px,2.6vw,40px);letter-spacing:-.035em;line-height:1.05}
+.p-text>p{margin-top:16px;color:var(--ink-2);font-size:18px;max-width:44ch}
+.ticks{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:14px}
+.ticks li{display:flex;gap:14px;align-items:center;font-size:17px;font-weight:400;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.ticks svg{width:22px;height:22px;color:var(--blue);flex:none}
+.p-pics{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:clamp(420px,46vw,600px)}
+.p-pics .ph{border-radius:22px;overflow:hidden;background:#dfe7f0}
+.p-pics .ph:first-child{grid-row:span 2}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease-out)}
+.ph:hover img{transform:scale(1.03)}
+@media (max-width:1023px){.panel{grid-template-columns:1fr}.p-pics{height:440px}}
+@media (max-width:639px){.tabs{display:flex}.tabs button{flex:1;padding:14px 10px}.p-pics{height:340px;gap:8px}.p-pics .ph{border-radius:16px}}
+
+/* durante e depois */
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.compare{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:3/4;background:#dfe7f0;user-select:none;-webkit-user-select:none;touch-action:pan-y}
+.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.compare .after{clip-path:inset(0 0 0 var(--pos,50%))}
+.compare .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:#fff;transform:translateX(-1px);pointer-events:none}
+.compare .handle::after{content:"";position:absolute;top:50%;left:50%;width:52px;height:52px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);box-shadow:0 8px 24px rgba(10,27,51,.25);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a1b33' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 7-5 5 5 5M15 7l5 5-5 5'/%3E%3C/svg%3E");background-size:24px;background-repeat:no-repeat;background-position:center;transition:transform .2s var(--ease-out)}
+.compare:hover .handle::after{transform:translate(-50%,-50%) scale(1.08)}
+.compare input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.compare .lbl{position:absolute;bottom:16px;font-size:14px;font-weight:500;background:rgba(247,250,253,.92);padding:7px 12px;border-radius:10px;pointer-events:none}
+.compare .lbl.l{left:16px}.compare .lbl.r{right:16px}
+.compare:has(input:focus-visible){outline:3px solid var(--blue);outline-offset:3px}
+@media (max-width:767px){.compare-grid{grid-template-columns:1fr}.compare{aspect-ratio:4/5}}
+
+/* galeria horizontal */
+@media (min-width:768px){#trabalhos{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:calc(var(--nav) + 32px);padding-bottom:48px}}
+.gallery{overflow:hidden}
+.track{display:flex;gap:16px;width:max-content;padding-inline:var(--gut)}
+.track .ph{width:clamp(260px,26vw,380px);height:clamp(340px,34vw,500px);border-radius:22px;overflow:hidden;flex:none;background:#dfe7f0}
+.track .ph.wide{width:clamp(380px,40vw,600px)}
+@media (max-width:767px){
+  .gallery{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .gallery::-webkit-scrollbar{display:none}
+  .track .ph{scroll-snap-align:center;width:72vw;height:92vw}
+  .track .ph.wide{width:86vw;height:64vw;align-self:center}
+}
+
+/* como pedir */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:n}
+.steps li{counter-increment:n;padding:28px;border-radius:24px;background:var(--paper);min-height:240px;display:flex;flex-direction:column}
+.steps li::before{content:counter(n);font-family:var(--led-font);font-weight:900;font-size:64px;line-height:.8;color:var(--blue);margin-bottom:auto}
+.steps h3{margin-top:40px}
+.steps p{margin-top:10px;color:var(--ink-2)}
+@media (max-width:899px){.steps{grid-template-columns:1fr}.steps li{min-height:0}.steps h3{margin-top:24px}}
+
+/* área atendida */
+.places{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.places li{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:24px;border-bottom:1px solid var(--line);padding:clamp(18px,2vw,28px) 0;transition:padding .35s var(--ease-out),color .35s ease}
+.places .name{font-size:clamp(40px,7vw,108px);font-weight:500;letter-spacing:-.05em;line-height:.95}
+.places .note{color:var(--ink-2);font-size:16px;text-align:right;max-width:26ch}
+.places li:hover{padding-left:24px;color:var(--blue)}
+@media (max-width:639px){.places li{grid-template-columns:1fr;gap:6px}.places .note{text-align:left}}
+
+/* técnico */
+.tech{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,5vw,80px);align-items:center}
+.tech .ph{border-radius:28px;overflow:hidden;aspect-ratio:4/5;max-height:640px}
+.tech .ph img{object-position:50% 18%}
+.tech p{margin-top:20px;color:var(--ink-2);font-size:18px;max-width:46ch}
+.tech .btns{margin-top:32px}
+@media (max-width:899px){.tech{grid-template-columns:1fr}.tech .ph{aspect-ratio:auto;height:460px}}
+
+/* fecho */
+.closing{background:var(--panel);color:#eaf3ff;padding:clamp(88px,10vw,140px) 0 0;overflow:hidden}
+.close-grid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:center}
+.big-temp{font-family:var(--led-font);font-weight:900;color:var(--led);font-size:clamp(150px,22vw,330px);line-height:.8;letter-spacing:-.03em;text-shadow:0 0 40px rgba(127,216,255,.35)}
+.big-temp sup{font-size:.4em;vertical-align:top;position:relative;top:.1em}
+.closing h2{color:#fff;max-width:14ch}
+.closing p.sub{margin-top:18px;color:#b9cbe4;font-size:18px;max-width:40ch}
+.closing .btns{margin-top:32px}
+.closing .btn--main{background:#fff;color:var(--ink)}
+.closing .btn--main:hover{background:#d8e8ff}
+.closing .btn--soft{background:rgba(255,255,255,.1);color:#fff}
+.closing .btn--soft:hover{background:rgba(255,255,255,.18)}
+.foot{margin-top:clamp(72px,8vw,120px);border-top:1px solid rgba(234,243,255,.14);padding:36px 0 calc(36px + var(--bar));display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:center;font-size:15px;color:#b9cbe4}
+.foot a{text-decoration:none}
+.foot .brand{color:#fff}
+.foot .brand small{color:#b9cbe4}
+.foot .legal a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.foot .legal a:hover{color:var(--led)}
+@media (max-width:899px){.close-grid{grid-template-columns:1fr}}
+@media (max-width:639px){.closing .btns .btn{width:100%}}
+
+/* barra do celular */
+.actionbar{display:none}
+@media (max-width:639px){
+  .actionbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:20;padding:8px 16px calc(8px + env(safe-area-inset-bottom));background:rgba(238,244,251,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+  .actionbar .btn{flex:1;height:52px}
+  .actionbar .btn--soft{flex:0 0 96px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body class="is-warm">
+<a class="skip" href="#servicos">Pular para o conteúdo</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#topo" aria-label="JW Climatização MCZ, início"><span class="chip" aria-hidden="true">JW</span>Climatização <small>MCZ</small></a>
+    <ul class="menu">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#resultado">Resultado</a></li>
+      <li><a href="#area">Área</a></li>
+      <li><a href="#tecnico">Técnico</a></li>
+    </ul>
+    <a class="btn btn--main" href="https://wa.me/5582999559744?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento</a>
+  </div>
+</header>
+
+<main id="topo">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <div>
+        <h1 id="h1">Ar-condicionado split limpo e instalado em Maceió</h1>
+        <p class="lead">Manutenção preventiva e instalação de split em casas, comércios e escritórios de Maceió, do litoral de Alagoas e de Arapiraca.</p>
+        <div class="btns">
+          <a class="btn btn--main" href="https://wa.me/5582999559744?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>
+            Pedir orçamento grátis
+          </a>
+          <a class="btn btn--soft" href="tel:+5582999559744">Ligar (82) 99955-9744</a>
+        </div>
+        <ul class="meta">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Orçamento sem custo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ambiente protegido na limpeza</li>
+        </ul>
+      </div>
+
+      <div class="stage">
+        <div class="photo ph"><img src="img/condensadora-fachada.webp" alt="Condensadora de ar-condicionado instalada na fachada de um prédio, com a escada do técnico apoiada na parede" width="900" height="1200" fetchpriority="high"></div>
+        <div class="display" aria-label="Visor do ar-condicionado em 18 graus" role="img">
+          <div class="row">
+            <div class="temp" id="temp" aria-hidden="true"><span class="digit-slot"><span class="new">1</span></span><span class="digit-slot"><span class="new">8</span></span><span class="deg">°</span></div>
+            <div class="modes" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5"/></svg>
+              <svg class="fan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 12c0-4 1-8 4-8s3 4-4 8Zm0 0c4 0 8 1 8 4s-4 3-8-4Zm0 0c0 4-1 8-4 8s-3-4 4-8Zm0 0c-4 0-8-1-8-4s4-3 8 4Z"/></svg>
+            </div>
+          </div>
+          <div class="air" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+        <p class="tag"><strong>Orçamento grátis</strong>Mande o modelo e a cidade no WhatsApp e receba o valor antes do serviço.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec paper" id="servicos" aria-labelledby="h-serv">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-serv">Do aparelho na parede ao aparelho novo</h2>
+        <p>Dois serviços para split hi-wall, feitos pelo mesmo técnico do começo ao fim.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Serviços">
+        <span class="pill" aria-hidden="true"></span>
+        <button role="tab" id="t-limpeza" aria-controls="p-limpeza" aria-selected="true">Limpeza</button>
+        <button role="tab" id="t-instalacao" aria-controls="p-instalacao" aria-selected="false" tabindex="-1">Instalação</button>
+      </div>
+
+      <div class="panel" id="p-limpeza" role="tabpanel" aria-labelledby="t-limpeza">
+        <div class="p-text">
+          <h3>Manutenção preventiva e limpeza de split</h3>
+          <p>Lavagem da serpentina e dos filtros, com lona, plástico e fita em volta do aparelho para não molhar a parede nem os móveis.</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7Z"/></svg>Menor consumo de energia</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11"/></svg>Mais desempenho para gelar</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8v4l3 2M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z"/></svg>Maior vida útil do aparelho</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>Evita falhas e prejuízos</li>
+          </ul>
+        </div>
+        <div class="p-pics">
+          <div class="ph"><img src="img/lavagem-split-detalhe.webp" alt="Serpentina de split sendo lavada, com a parte elétrica protegida por plástico" loading="lazy" width="900" height="1200"></div>
+          <div class="ph"><img src="img/split-gree-filtros.webp" alt="Split aberto com os filtros à mostra durante a manutenção" loading="lazy" width="1200" height="900"></div>
+          <div class="ph"><img src="img/lavagem-split-serpentina.webp" alt="Serpentina de split lavada, com lona azul presa embaixo" loading="lazy" width="1200" height="900"></div>
+        </div>
+      </div>
+
+      <div class="panel" id="p-instalacao" role="tabpanel" aria-labelledby="t-instalacao" hidden>
+        <div class="p-text">
+          <h3>Instalação de ar-condicionado split</h3>
+          <p>Evaporadora na parede, condensadora no suporte e o aparelho entregue ligado e funcionando.</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7M5 10v10h14V10"/></svg>Residências</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16l-1-5H5ZM5 9v11h14V9M9 20v-6h6v6"/></svg>Comércios e pontos comerciais</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V7l9-4 9 4v14M8 21v-4h8v4M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg>Escritórios</li>
+          </ul>
+        </div>
+        <div class="p-pics">
+          <div class="ph"><img src="img/condensadora-instalada.webp" alt="Condensadora Midea instalada em suportes na parede, ao lado do quadro de disjuntores" loading="lazy" width="900" height="1200"></div>
+          <div class="ph"><img src="img/evaporadora-nova.webp" alt="Evaporadora Midea nova sobre o isopor da embalagem, antes da instalação" loading="lazy" width="900" height="1200" style="object-position:50% 30%"></div>
+          <div class="ph"><img src="img/split-midea-quarto-pronto.webp" alt="Split instalado na parede de um quarto, acima da porta da varanda" loading="lazy" width="900" height="1200"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="resultado" aria-labelledby="h-res">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-res">O mesmo aparelho, durante e depois</h2>
+        <p>Arraste a linha para comparar a limpeza em andamento com o split pronto.</p>
+      </div>
+      <div class="compare-grid">
+        <div class="compare" style="--pos:50%">
+          <img src="img/split-midea-quarto-lavagem.webp" alt="Split em limpeza no quarto, com a bolsa coletora azul e a mangueira de escoamento" loading="lazy" width="900" height="1200">
+          <img class="after" src="img/split-midea-quarto-pronto.webp" alt="O mesmo split fechado e pronto depois da limpeza" loading="lazy" width="900" height="1200">
+          <span class="handle" aria-hidden="true"></span>
+          <span class="lbl l" aria-hidden="true">Durante</span><span class="lbl r" aria-hidden="true">Pronto</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Comparar o split do quarto durante a limpeza e pronto">
+        </div>
+        <div class="compare" style="--pos:50%">
+          <img src="img/split-midea-prateleira-aberto.webp" alt="Split aberto embaixo de uma prateleira, com a placa e a serpentina à mostra" loading="lazy" width="900" height="1200">
+          <img class="after" src="img/split-midea-prateleira.webp" alt="O mesmo split fechado e ligado em 20 graus" loading="lazy" width="900" height="1200">
+          <span class="handle" aria-hidden="true"></span>
+          <span class="lbl l" aria-hidden="true">Durante</span><span class="lbl r" aria-hidden="true">Pronto</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Comparar o split da prateleira durante a manutenção e pronto">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec paper" id="trabalhos" aria-labelledby="h-trab">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-trab">Trabalhos feitos pela JW</h2>
+        <p>Fotos reais de serviços em casas e prédios de Alagoas.</p>
+      </div>
+    </div>
+    <div class="gallery" id="gallery">
+      <div class="track" id="track">
+        <div class="ph"><img src="img/split-gree-pronto.webp" alt="Split Gree inverter ligado na parede depois do serviço" loading="lazy" width="900" height="1200"></div>
+        <div class="ph wide"><img src="img/lavagem-split-serpentina.webp" alt="Serpentina de split lavada com proteção azul" loading="lazy" width="1200" height="900"></div>
+        <div class="ph"><img src="img/condensadora-nova.webp" alt="Condensadora Midea inverter nova, pronta para ser instalada" loading="lazy" width="900" height="1200"></div>
+        <div class="ph"><img src="img/split-midea-forro.webp" alt="Split Midea instalado embaixo de um forro de PVC, ligado em 16 graus" loading="lazy" width="900" height="1200"></div>
+        <div class="ph wide"><img src="img/split-gree-filtros.webp" alt="Split Gree aberto com os filtros à mostra" loading="lazy" width="1200" height="900"></div>
+        <div class="ph"><img src="img/lavagem-split-detalhe.webp" alt="Detalhe da lavagem da serpentina com a parte elétrica protegida" loading="lazy" width="900" height="1200"></div>
+        <div class="ph"><img src="img/condensadora-fachada.webp" alt="Condensadora na fachada de um prédio com a escada do técnico" loading="lazy" width="900" height="1200"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="como" aria-labelledby="h-como">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-como">Como pedir o orçamento</h2>
+        <p>Tudo pelo WhatsApp, sem cadastro e sem custo para saber o valor.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Mande uma mensagem</h3><p>Diga a cidade, o serviço e quantos aparelhos são. Uma foto do aparelho ajuda.</p></li>
+        <li><h3>Receba o valor</h3><p>O orçamento é grátis e chega antes de qualquer serviço.</p></li>
+        <li><h3>Combine o dia</h3><p>Com o valor aprovado, vocês acertam a data e o horário da visita.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec paper" id="area" aria-labelledby="h-area">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="h-area">Onde a JW atende</h2>
+        <p>Grande parte de Alagoas, da capital ao agreste.</p>
+      </div>
+      <ul class="places">
+        <li><span class="name">Maceió</span><span class="note">Todos os bairros e a região metropolitana</span></li>
+        <li><span class="name">Litoral Norte</span><span class="note">Todo o litoral norte de Alagoas</span></li>
+        <li><span class="name">Litoral Sul</span><span class="note">Todo o litoral sul de Alagoas</span></li>
+        <li><span class="name">Arapiraca</span><span class="note">Em Arapiraca</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="tecnico" aria-labelledby="h-tec">
+    <div class="wrap tech">
+      <div class="ph"><img src="img/jw-tecnico.webp" alt="Técnico da JW Climatização com a camisa da empresa" loading="lazy" width="420" height="620"></div>
+      <div>
+        <h2 id="h-tec">Técnico especializado em ar-condicionado split</h2>
+        <p>Atendimento rápido e serviço com qualidade. Antes de abrir o aparelho, o ambiente é protegido com lona, plástico e fita, e tudo é entregue limpo.</p>
+        <div class="btns">
+          <a class="btn btn--soft" href="tel:+5582999559744">Ligar (82) 99955-9744</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="closing" aria-labelledby="h-close">
+  <div class="wrap">
+    <div class="close-grid">
+      <div class="big-temp" aria-hidden="true">18<sup>°</sup></div>
+      <div>
+        <h2 id="h-close">Orçamento grátis pelo WhatsApp</h2>
+        <p class="sub">Limpeza e instalação de split em Maceió, no litoral de Alagoas e em Arapiraca.</p>
+        <div class="btns">
+          <a class="btn btn--main" href="https://wa.me/5582999559744?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento grátis</a>
+          <a class="btn btn--soft" href="tel:+5582999559744">Ligar (82) 99955-9744</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <a class="brand" href="#topo"><span class="chip" aria-hidden="true">JW</span>Climatização <small>MCZ</small></a>
+      <span>Maceió, Litoral Norte, Litoral Sul e Arapiraca</span>
+      <span class="legal">© 2026 JW Climatização MCZ. José Willians Santos da Silva, CNPJ 47.673.585/0001-74. <a href="privacidade.html">Política de privacidade</a></span>
+    </div>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Contato rápido">
+  <a class="btn btn--main" href="https://wa.me/5582999559744?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento</a>
+  <a class="btn btn--soft" href="tel:+5582999559744" aria-label="Ligar para (82) 99955-9744">Ligar</a>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* cabeçalho ganha fundo ao rolar */
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('is-scrolled', scrollY > 8);
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* o momento da página: o visor cai de 30° para 18° e o fundo esfria */
+  const temp = document.getElementById('temp');
+  const render = (n, prev) => {
+    const a = String(n).padStart(2,'0'), b = String(prev).padStart(2,'0');
+    temp.querySelectorAll('.digit-slot').forEach((slot, i) => {
+      if (a[i] === b[i]) { slot.innerHTML = `<span class="new">${a[i]}</span>`; return; }
+      slot.innerHTML = `<span class="old" style="transform:none;opacity:1;filter:none">${b[i]}</span><span class="new is-in">${a[i]}</span>`;
+      const oldEl = slot.firstChild, newEl = slot.lastChild;
+      requestAnimationFrame(() => requestAnimationFrame(() => { oldEl.removeAttribute('style'); newEl.classList.remove('is-in'); }));
+    });
+  };
+  if (reduce) {
+    document.body.classList.remove('is-warm');
+  } else {
+    let t = 30, started = false; render(t, t);
+    const start = () => { if (started) return; started = true; setTimeout(() => {
+      document.body.classList.add('is-cooling');
+      document.body.classList.remove('is-warm');
+      const tick = () => {
+        const prev = t; t -= 1; render(t, prev);
+        if (t > 18) setTimeout(tick, t > 21 ? 110 : 190 + (21 - t) * 70);
+      };
+      tick();
+    }, 500); };
+    /* começa quando o visor aparece na tela (no celular ele fica abaixo da dobra) */
+    const disp = document.querySelector('.display');
+    const check = () => { const r = disp.getBoundingClientRect(); if (r.top >= 0 && r.bottom <= innerHeight - 40) { removeEventListener('scroll', check); start(); } };
+    addEventListener('scroll', check, {passive:true}); check();
+  }
+
+  /* abas de serviço com a pílula deslizante */
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const pill = document.querySelector('.tabs .pill');
+  const movePill = (btn) => { pill.style.width = btn.offsetWidth + 'px'; pill.style.transform = `translateX(${btn.offsetLeft - 5}px)`; };
+  const select = (btn, focus) => {
+    tabs.forEach(b => {
+      const on = b === btn, panel = document.getElementById(b.getAttribute('aria-controls'));
+      b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1;
+      if (on) {
+        panel.hidden = false; panel.classList.add('is-entering');
+        requestAnimationFrame(() => requestAnimationFrame(() => panel.classList.remove('is-entering')));
+      } else panel.hidden = true;
+    });
+    movePill(btn); if (focus) btn.focus();
+    if (window.ScrollTrigger) ScrollTrigger.refresh();
+  };
+  tabs.forEach((b, i) => {
+    b.addEventListener('click', () => select(b));
+    b.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); select(tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length], true); }
+    });
+  });
+  const firstPill = () => movePill(tabs.find(b => b.getAttribute('aria-selected') === 'true'));
+  firstPill();
+  if (document.fonts) document.fonts.ready.then(firstPill);
+  addEventListener('resize', firstPill);
+
+  /* comparação durante e depois */
+  document.querySelectorAll('.compare').forEach(c => {
+    const input = c.querySelector('input');
+    input.addEventListener('input', () => c.style.setProperty('--pos', input.value + '%'));
+  });
+
+  /* galeria: rolagem horizontal presa ao rolar a página (só em telas largas) */
+  addEventListener('load', () => {
+    if (reduce || !window.gsap || !window.ScrollTrigger) return;
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.matchMedia().add('(min-width: 768px)', () => {
+      const track = document.getElementById('track');
+      const dist = () => Math.max(0, track.scrollWidth - innerWidth);
+      gsap.to(track, {
+        x: () => -dist(), ease: 'none',
+        scrollTrigger: { trigger: '#trabalhos', start: 'top top', end: () => '+=' + dist(), pin: true, scrub: 0.6, invalidateOnRefresh: true }
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
